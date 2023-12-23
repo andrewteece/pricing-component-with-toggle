@@ -1,0 +1,26 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap');
+
+/* CSS Custom Properties */
+:root {
+  --clr-neutral-400: hsl(240, 78%, 98%);
+  --clr-neutral-500: hsl(234, 14%, 74%);
+  --clr-neutral-600: hsl(233, 13%, 49%);
+  --clr-neutral-700: hsl(232, 13%, 33%);
+
+  --linear-gradient: linear-gradient
+    (to right, hsl(236, 72%, 79%), hsl(237, 63%, 64%));
+
+  --fs-sm: 0.875rem;
+  --fs-base: 1rem;
+  --fs-md: 1.125rem;
+  --fs-lg: 2rem;
+  --fs-xxlg: 4.5rem;
+}
+
+/* CSS Basic Reset */
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
