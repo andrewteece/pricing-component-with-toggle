@@ -14,6 +14,7 @@
   --fs-base: 1rem;
   --fs-md: 1.125rem;
   --fs-lg: 2rem;
+  --fs-xlg: 2.5rem;
   --fs-xxlg: 4.5rem;
 
   --ff-primary: 'Montserrat', sans-serif;
@@ -27,4 +28,69 @@
   padding: 0;
 }
 
+li {
+  list-style-type: none;
+}
+
 /* Body Styles */
+
+body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  font-family: var(--ff-primary);
+  background-image: url('../images/bg-top.svg'), url('../images/bg-bottom.svg');
+  background-repeat: no-repeat no-repeat;
+  background-size: 80%, 26.5%;
+  background-position: top 0 right -10rem, bottom -5rem left -2rem;
+}
+
+/* Header Styles */
+
+header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  margin-top: 2rem;
+}
+
+.toggle {
+  display: flex;
+  align-items: center;
+}
+
+/* Card Styles */
+
+.card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 2rem;
+  margin: 1rem;
+  border-radius: 0.625rem;
+  box-shadow: 0 0.625rem 1.875rem rgba(0, 0, 0, 0.1);
+}
+
+.card__title {
+  font-size: var(--fs-md);
+  color: var(--clr-neutral-500);
+}
+
+.card__price {
+  display: flex;
+  align-items: center;
+  gap: 0.2rem;
+  margin: 1rem 0;
+  color: var(--clr-neutral-700);
+}
+
+.card__price--amount {
+  font-size: var(--fs-xxlg);
+}
+
+.card__price--sign {
+  font-size: var(--fs-xlg);
+}
