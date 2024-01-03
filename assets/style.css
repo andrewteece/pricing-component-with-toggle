@@ -87,6 +87,7 @@ ul li:last-child {
 .flex {
   display: flex;
   align-items: center;
+  justify-content: center;
   gap: 0.5rem;
 }
 
@@ -141,7 +142,7 @@ header h1 {
   height: 1.25rem;
   background-color: var(--clr-neutral-400);
   border-radius: 50%;
-  transition: all 0.3s;
+  transition: all 200ms ease-in;
 }
 
 .toggle {
@@ -209,8 +210,8 @@ input[type='checkbox']:checked + .toggle--wrapper .toggle--switch {
   border-top: 1px solid var(--clr-accent-100);
 }
 
-.size--xlg {
-  font-size: var(--fs-xlg);
+.amount {
+  transition: all 350ms ease-in;
 }
 
 /* Button Styles */
