@@ -8,6 +8,9 @@
   --clr-neutral-600: hsl(233, 13%, 49%);
   --clr-neutral-700: hsl(232, 13%, 33%);
 
+  --clr-accent-100: hsla(360, 100%, 100%, 0.25);
+  --clr-accent-400: hsl(237, 63%, 65%);
+
   --linear-gradient: linear-gradient(
     to right,
     hsl(236, 72%, 79%),
@@ -51,6 +54,7 @@ body {
   justify-content: center;
   text-align: center;
   font-family: var(--ff-primary);
+  background-color: var(--clr-neutral-400);
   background-image: url('../images/bg-top.svg'), url('../images/bg-bottom.svg');
   background-repeat: no-repeat no-repeat;
   background-size: 80%, 26.5%;
@@ -69,7 +73,7 @@ section {
 
 ul li {
   font-size: var(--fs-sm);
-  padding-block: 0.5rem;
+  padding-block: 1rem;
   color: var(--clr-neutral-600);
   border-top: 1.2px solid rgba(188, 188, 194, 0.5);
 }
@@ -109,14 +113,14 @@ header span {
 }
 
 header h1 {
-  margin-bottom: 1.25rem;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
   color: var(--clr-neutral-600);
 }
 
 .toggle--wrapper {
   display: flex;
   align-items: center;
-  justify-content: center;
   position: relative;
   width: 3.75rem;
   height: 1.875rem;
@@ -191,10 +195,42 @@ input[type='checkbox']:checked + .toggle--wrapper .toggle--switch {
   margin-bottom: 1.5rem;
 }
 
+.title--dark {
+  color: var(--clr-neutral-600);
+}
+
 .plan__price {
   font-size: var(--fs-xxlg);
+  margin-bottom: 1.25rem;
+}
+
+.plan__description--light li {
+  color: var(--clr-neutral-100);
+  border-top: 1px solid var(--clr-accent-100);
 }
 
 .size--xlg {
   font-size: var(--fs-xlg);
+}
+
+/* Button Styles */
+
+button {
+  width: 100%;
+  padding: 0.8rem;
+  margin-top: 1.25rem;
+  letter-spacing: 1.4px;
+  border-radius: 0.375rem;
+  text-transform: uppercase;
+  font-weight: bold;
+  border: none;
+}
+
+.btn--dark {
+  color: var(--clr-neutral-100);
+  background: var(--linear-gradient);
+}
+.btn--light {
+  background: var(--clr-neutral-100);
+  color: var(--clr-accent-400);
 }
