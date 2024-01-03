@@ -2,13 +2,23 @@
 
 /* CSS Custom Properties */
 :root {
+  --clr-neutral-100: hsl(0, 0%, 100%);
   --clr-neutral-400: hsl(240, 78%, 98%);
   --clr-neutral-500: hsl(234, 14%, 74%);
   --clr-neutral-600: hsl(233, 13%, 49%);
   --clr-neutral-700: hsl(232, 13%, 33%);
 
-  --linear-gradient: linear-gradient
-    (to right, hsl(236, 72%, 79%), hsl(237, 63%, 64%));
+  --linear-gradient: linear-gradient(
+    to right,
+    hsl(236, 72%, 79%),
+    hsl(237, 63%, 64%)
+  );
+
+  --linear-gradient-2: linear-gradient(
+    to bottom,
+    hsl(236, 72%, 79%),
+    hsl(237, 63%, 64%)
+  );
 
   --fs-sm: 0.875rem;
   --fs-base: 1rem;
@@ -32,7 +42,7 @@ li {
   list-style-type: none;
 }
 
-/* Body Styles */
+/* Body & General Styles */
 
 body {
   display: flex;
@@ -47,6 +57,43 @@ body {
   background-position: top 0 right -10rem, bottom -5rem left -2rem;
 }
 
+/*header,
+main,
+footer {
+  width: 90%;
+} */
+
+section {
+  margin-top: 4rem;
+}
+
+ul li {
+  font-size: var(--fs-sm);
+  padding-block: 0.5rem;
+  color: var(--clr-neutral-600);
+  border-top: 1.2px solid rgba(188, 188, 194, 0.5);
+}
+
+ul li:last-child {
+  border-bottom: 1.2px solid rgba(188, 188, 194, 0.5);
+}
+
+/* Utility Classes */
+
+.flex {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.flow-content > * + * {
+  margin-top: 1rem;
+}
+
+.size--xlg {
+  font-size: var(--fs-xlg);
+}
+
 /* Header Styles */
 
 header {
@@ -57,40 +104,97 @@ header {
   margin-top: 2rem;
 }
 
+header span {
+  color: var(--clr-neutral-500);
+}
+
+header h1 {
+  margin-bottom: 1.25rem;
+  color: var(--clr-neutral-600);
+}
+
+.toggle--wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  width: 3.75rem;
+  height: 1.875rem;
+  padding: 0 0.2rem;
+  margin: 0 1rem;
+  background: var(--linear-gradient);
+  border-radius: 1rem;
+}
+
+.toggle--wrapper:hover {
+  opacity: 0.5;
+}
+
+.toggle--switch {
+  content: '';
+  position: absolute;
+  width: 1.25rem;
+  height: 1.25rem;
+  background-color: var(--clr-neutral-400);
+  border-radius: 50%;
+  transition: all 0.3s;
+}
+
 .toggle {
   display: flex;
   align-items: center;
+  justify-content: center;
 }
 
-/* Card Styles */
+.toggle p {
+  color: var(--clr-neutral-500);
+  transition: background-color 0.3s;
+  cursor: pointer;
+}
 
-.card {
+input[type='checkbox'] {
+  display: none;
+}
+
+input[type='checkbox']:checked + .toggle--wrapper .toggle--switch {
+  transform: translateX(calc(2.125rem));
+}
+
+/* Plan Styles */
+
+.plans {
   display: flex;
   flex-direction: column;
-  align-items: center;
+  justify-content: center;
+  gap: 2rem;
+}
+
+.plan {
+  width: 20.3125rem;
   padding: 2rem;
-  margin: 1rem;
+  margin: 0 0.5rem;
   border-radius: 0.625rem;
   box-shadow: 0 0.625rem 1.875rem rgba(0, 0, 0, 0.1);
 }
 
-.card__title {
+.plan--light {
+  background: var(--clr-neutral-100);
+}
+
+.plan--accent {
+  background: var(--linear-gradient-2);
+  color: var(--clr-neutral-100);
+}
+
+.plan__title {
   font-size: var(--fs-md);
-  color: var(--clr-neutral-500);
+  margin-bottom: 1.5rem;
 }
 
-.card__price {
-  display: flex;
-  align-items: center;
-  gap: 0.2rem;
-  margin: 1rem 0;
-  color: var(--clr-neutral-700);
-}
-
-.card__price--amount {
+.plan__price {
   font-size: var(--fs-xxlg);
 }
 
-.card__price--sign {
+.size--xlg {
   font-size: var(--fs-xlg);
 }
