@@ -210,10 +210,6 @@ input[type='checkbox']:checked + .toggle--wrapper .toggle--switch {
   border-top: 1px solid var(--clr-accent-100);
 }
 
-.amount {
-  transition: all 350ms ease-in;
-}
-
 /* Button Styles */
 
 button {
@@ -225,13 +221,25 @@ button {
   text-transform: uppercase;
   font-weight: bold;
   border: none;
+  cursor: pointer;
 }
 
 .btn--dark {
   color: var(--clr-neutral-100);
   background: var(--linear-gradient);
 }
+
 .btn--light {
   background: var(--clr-neutral-100);
   color: var(--clr-accent-400);
+}
+
+@media screen and (min-width: 48rem) {
+  body {
+    background-image: url('../images/bg-top.svg'),
+      url('../images/bg-bottom.svg');
+    background-repeat: no-repeat, no-repeat;
+    background-size: 26.5%, 26.5%;
+    background-position: top 0 right -1rem, bottom -4.7rem left -1.9rem;
+  }
 }
