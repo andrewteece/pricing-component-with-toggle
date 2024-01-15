@@ -229,12 +229,28 @@ button {
   background: var(--linear-gradient);
 }
 
+.btn--dark:hover,
+.btn--dark:focus {
+  color: var(--clr-accent-400);
+  background: var(--clr-neutral-100);
+  outline: 1px solid var(--clr-accent-400);
+  transition: all 400ms ease-in-out;
+}
+
 .btn--light {
   background: var(--clr-neutral-100);
   color: var(--clr-accent-400);
 }
 
-@media screen and (min-width: 48rem) {
+.btn--light:hover,
+.btn--ligh:focus {
+  color: var(--clr-neutral-100);
+  background: var(--clr-accent-400);
+  outline: 1px solid var(--clr-neutral-100);
+  transition: all 400ms ease-in-out;
+}
+
+@media screen and (min-width: 48em) {
   body {
     background-image: url('../images/bg-top.svg'),
       url('../images/bg-bottom.svg');
