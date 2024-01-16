@@ -45,7 +45,7 @@ Users should be able to:
 
 ## Author
 
-- Frontend Mentor - [@andrewteece](https://www.frontendmentor.io/profile/yourusername)
+- Frontend Mentor - [@andrewteece](https://www.frontendmentor.io/profile/andrewteece)
 
 
 
